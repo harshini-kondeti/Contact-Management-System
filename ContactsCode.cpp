@@ -2,10 +2,10 @@
 #include <cstring>
 using namespace std;
 
-#define CONTACTS 10
+#define CONTACTS 30
 
 struct Contact {
-   char name[50], email[30], phone[15];
+   char name[50], email[50], phone[50];
 };
 
 struct Contact contacts[CONTACTS];
