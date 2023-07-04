@@ -1,12 +1,11 @@
 #include <iostream>
-using namespace std;
-#include<stdlib.h>
 #include <cstring>
+using namespace std;
 
-#define CONTACTS 50
+#define CONTACTS 10
 
 struct Contact {
-   char name[50], email[50], phone[50];
+   char name[50], email[30], phone[15];
 };
 
 struct Contact contacts[CONTACTS];
@@ -36,9 +35,8 @@ void add() {
         cout << "Entered number is invalid. Re-enter the phone number: ";
         cin >> c.phone;
     }
-    system("Color 01");
     cout << "Enter email: ";
-    cin >> c.email;
+   cin >> c.email;
     if (strlen(c.phone) == 10) {
         contacts[count++] = c;
     }
@@ -140,7 +138,7 @@ void find() {
     if (!found) {
         cout << "Contact not found\n";
     }
-    cout << "\n";
+   cout << "\n";
 }
 
 int main() {
